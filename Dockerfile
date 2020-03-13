@@ -37,7 +37,7 @@ RUN set -xe && \
     php7-mbstring php7-fileinfo php7-session && \
     apk del --progress --purge && \
     rm -rf /var/cache/apk/*
-RUN easy_install-2.7 j2cli
+RUN easy_install-2.7 j2cli==0.3.10
 # RUN ln -s /usr/bin/php7 /usr/bin/php && \
 RUN ln -s /usr/sbin/php-fpm7 /usr/bin/php-fpm
 
