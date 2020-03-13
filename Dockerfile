@@ -17,8 +17,9 @@ ENV DB_USER ttrss
 ENV DB_PASS ttrss
 ENV BASE_URL http://localhost:8080/
 
-# Expose volumes
-VOLUME [ "/var/www/ttrss/docker" ]
+# Expose these volumes
+VOLUME /var/www/ttrss/docker/themes
+VOLUME /var/www/ttrss/docker/plugins
 
 # Add s6 overlay.
 RUN cd /var/tmp && \
